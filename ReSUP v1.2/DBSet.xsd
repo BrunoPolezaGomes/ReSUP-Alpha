@@ -94,7 +94,33 @@ SELECT idAtividade, idCliente, idTV, idTecnico, Descricao1, Descricao2, Situacao
               <Mapping SourceColumn="Situacao" DataSetColumn="Situacao" />
               <Mapping SourceColumn="Created_at" DataSetColumn="Created_at" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="dbConnect (Settings)" DbObjectName="TvBagApp.dbo.Atividade" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idAtividade, idCliente, idTV, idTecnico, Descricao1, Descricao2, Situacao, Created_at FROM Atividade
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="dbConnect (Settings)" DbObjectName="TvBagApp.dbo.Atividade" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idAtividade, idCliente, idTV, idTecnico, Descricao1, Descricao2, Situacao, Created_at FROM Atividade</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="dbConnect (Settings)" DbObjectName="TvBagApp.dbo.Atividade" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idAtividade, idCliente, idTV, idTecnico, Descricao1, Descricao2, Situacao, Created_at FROM dbo.Atividade</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClienteTableAdapter" GeneratorDataComponentClassName="ClienteTableAdapter" Name="Cliente" UserDataComponentName="ClienteTableAdapter">
             <MainSource>
@@ -312,7 +338,7 @@ SELECT idTecnico, NomeTecnico FROM Tecnico WHERE (idTecnico = @idTecnico)</Comma
   <xs:element name="DBSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DBSet" msprop:Generator_UserDSName="DBSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Atividade" msprop:Generator_TableClassName="AtividadeDataTable" msprop:Generator_TableVarName="tableAtividade" msprop:Generator_RowChangedName="AtividadeRowChanged" msprop:Generator_TablePropName="Atividade" msprop:Generator_RowDeletingName="AtividadeRowDeleting" msprop:Generator_RowChangingName="AtividadeRowChanging" msprop:Generator_RowEvHandlerName="AtividadeRowChangeEventHandler" msprop:Generator_RowDeletedName="AtividadeRowDeleted" msprop:Generator_RowClassName="AtividadeRow" msprop:Generator_UserTableName="Atividade" msprop:Generator_RowEvArgName="AtividadeRowChangeEvent">
+        <xs:element name="Atividade" msprop:Generator_TableClassName="AtividadeDataTable" msprop:Generator_TableVarName="tableAtividade" msprop:Generator_TablePropName="Atividade" msprop:Generator_RowDeletingName="AtividadeRowDeleting" msprop:Generator_RowChangingName="AtividadeRowChanging" msprop:Generator_RowEvHandlerName="AtividadeRowChangeEventHandler" msprop:Generator_RowDeletedName="AtividadeRowDeleted" msprop:Generator_UserTableName="Atividade" msprop:Generator_RowChangedName="AtividadeRowChanged" msprop:Generator_RowEvArgName="AtividadeRowChangeEvent" msprop:Generator_RowClassName="AtividadeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idAtividade" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidAtividade" msprop:Generator_ColumnPropNameInRow="idAtividade" msprop:Generator_ColumnPropNameInTable="idAtividadeColumn" msprop:Generator_UserColumnName="idAtividade" type="xs:int" />
@@ -344,7 +370,7 @@ SELECT idTecnico, NomeTecnico FROM Tecnico WHERE (idTecnico = @idTecnico)</Comma
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Cliente" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowEvArgName="ClienteRowChangeEvent">
+        <xs:element name="Cliente" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_RowClassName="ClienteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCliente" msprop:Generator_ColumnPropNameInRow="idCliente" msprop:Generator_ColumnPropNameInTable="idClienteColumn" msprop:Generator_UserColumnName="idCliente" type="xs:int" />
@@ -367,7 +393,7 @@ SELECT idTecnico, NomeTecnico FROM Tecnico WHERE (idTecnico = @idTecnico)</Comma
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TeamViewer" msprop:Generator_TableClassName="TeamViewerDataTable" msprop:Generator_TableVarName="tableTeamViewer" msprop:Generator_RowChangedName="TeamViewerRowChanged" msprop:Generator_TablePropName="TeamViewer" msprop:Generator_RowDeletingName="TeamViewerRowDeleting" msprop:Generator_RowChangingName="TeamViewerRowChanging" msprop:Generator_RowEvHandlerName="TeamViewerRowChangeEventHandler" msprop:Generator_RowDeletedName="TeamViewerRowDeleted" msprop:Generator_RowClassName="TeamViewerRow" msprop:Generator_UserTableName="TeamViewer" msprop:Generator_RowEvArgName="TeamViewerRowChangeEvent">
+        <xs:element name="TeamViewer" msprop:Generator_TableClassName="TeamViewerDataTable" msprop:Generator_TableVarName="tableTeamViewer" msprop:Generator_TablePropName="TeamViewer" msprop:Generator_RowDeletingName="TeamViewerRowDeleting" msprop:Generator_RowChangingName="TeamViewerRowChanging" msprop:Generator_RowEvHandlerName="TeamViewerRowChangeEventHandler" msprop:Generator_RowDeletedName="TeamViewerRowDeleted" msprop:Generator_UserTableName="TeamViewer" msprop:Generator_RowChangedName="TeamViewerRowChanged" msprop:Generator_RowEvArgName="TeamViewerRowChangeEvent" msprop:Generator_RowClassName="TeamViewerRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idTV" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidTV" msprop:Generator_ColumnPropNameInRow="idTV" msprop:Generator_ColumnPropNameInTable="idTVColumn" msprop:Generator_UserColumnName="idTV" type="xs:int" />
@@ -410,7 +436,7 @@ SELECT idTecnico, NomeTecnico FROM Tecnico WHERE (idTecnico = @idTecnico)</Comma
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Tecnico" msprop:Generator_TableClassName="TecnicoDataTable" msprop:Generator_TableVarName="tableTecnico" msprop:Generator_RowChangedName="TecnicoRowChanged" msprop:Generator_TablePropName="Tecnico" msprop:Generator_RowDeletingName="TecnicoRowDeleting" msprop:Generator_RowChangingName="TecnicoRowChanging" msprop:Generator_RowEvHandlerName="TecnicoRowChangeEventHandler" msprop:Generator_RowDeletedName="TecnicoRowDeleted" msprop:Generator_RowClassName="TecnicoRow" msprop:Generator_UserTableName="Tecnico" msprop:Generator_RowEvArgName="TecnicoRowChangeEvent">
+        <xs:element name="Tecnico" msprop:Generator_TableClassName="TecnicoDataTable" msprop:Generator_TableVarName="tableTecnico" msprop:Generator_TablePropName="Tecnico" msprop:Generator_RowDeletingName="TecnicoRowDeleting" msprop:Generator_RowChangingName="TecnicoRowChanging" msprop:Generator_RowEvHandlerName="TecnicoRowChangeEventHandler" msprop:Generator_RowDeletedName="TecnicoRowDeleted" msprop:Generator_UserTableName="Tecnico" msprop:Generator_RowChangedName="TecnicoRowChanged" msprop:Generator_RowEvArgName="TecnicoRowChangeEvent" msprop:Generator_RowClassName="TecnicoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idTecnico" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidTecnico" msprop:Generator_ColumnPropNameInRow="idTecnico" msprop:Generator_ColumnPropNameInTable="idTecnicoColumn" msprop:Generator_UserColumnName="idTecnico" type="xs:int" />
@@ -421,6 +447,13 @@ SELECT idTecnico, NomeTecnico FROM Tecnico WHERE (idTecnico = @idTecnico)</Comma
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PasswordDay" msprop:Generator_TableClassName="PasswordDayDataTable" msprop:Generator_TableVarName="tablePasswordDay" msprop:Generator_RowChangedName="PasswordDayRowChanged" msprop:Generator_TablePropName="PasswordDay" msprop:Generator_RowDeletingName="PasswordDayRowDeleting" msprop:Generator_RowChangingName="PasswordDayRowChanging" msprop:Generator_RowEvHandlerName="PasswordDayRowChangeEventHandler" msprop:Generator_RowDeletedName="PasswordDayRowDeleted" msprop:Generator_RowClassName="PasswordDayRow" msprop:Generator_UserTableName="PasswordDay" msprop:Generator_RowEvArgName="PasswordDayRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pass" msprop:Generator_ColumnVarNameInTable="columnPass" msprop:Generator_ColumnPropNameInRow="Pass" msprop:Generator_ColumnPropNameInTable="PassColumn" msprop:Generator_UserColumnName="Pass" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -445,11 +478,11 @@ SELECT idTecnico, NomeTecnico FROM Tecnico WHERE (idTecnico = @idTecnico)</Comma
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Atividade_idCliente" msdata:parent="Cliente" msdata:child="Atividade" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="Atividade" msprop:Generator_ChildPropName="GetAtividadeRows" msprop:Generator_UserRelationName="FK_Atividade_idCliente" msprop:Generator_ParentPropName="ClienteRow" msprop:Generator_RelationVarName="relationFK_Atividade_idCliente" msprop:Generator_UserParentTable="Cliente" />
-      <msdata:Relationship name="FK_Atividade_idTecnico" msdata:parent="Tecnico" msdata:child="Atividade" msdata:parentkey="idTecnico" msdata:childkey="idTecnico" msprop:Generator_UserChildTable="Atividade" msprop:Generator_ChildPropName="GetAtividadeRows" msprop:Generator_UserRelationName="FK_Atividade_idTecnico" msprop:Generator_ParentPropName="TecnicoRow" msprop:Generator_RelationVarName="relationFK_Atividade_idTecnico" msprop:Generator_UserParentTable="Tecnico" />
-      <msdata:Relationship name="FK_Atividade_idTV" msdata:parent="TeamViewer" msdata:child="Atividade" msdata:parentkey="idTV" msdata:childkey="idTV" msprop:Generator_UserChildTable="Atividade" msprop:Generator_ChildPropName="GetAtividadeRows" msprop:Generator_UserRelationName="FK_Atividade_idTV" msprop:Generator_ParentPropName="TeamViewerRow" msprop:Generator_RelationVarName="relationFK_Atividade_idTV" msprop:Generator_UserParentTable="TeamViewer" />
-      <msdata:Relationship name="FK_Cliente_idTecnico" msdata:parent="Tecnico" msdata:child="Cliente" msdata:parentkey="idTecnico" msdata:childkey="idTecnico" msprop:Generator_UserChildTable="Cliente" msprop:Generator_ChildPropName="GetClienteRows" msprop:Generator_UserRelationName="FK_Cliente_idTecnico" msprop:Generator_ParentPropName="TecnicoRow" msprop:Generator_RelationVarName="relationFK_Cliente_idTecnico" msprop:Generator_UserParentTable="Tecnico" />
-      <msdata:Relationship name="FK_TeamViewe_idCliente" msdata:parent="Cliente" msdata:child="TeamViewer" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="TeamViewer" msprop:Generator_ChildPropName="GetTeamViewerRows" msprop:Generator_UserRelationName="FK_TeamViewe_idCliente" msprop:Generator_RelationVarName="relationFK_TeamViewe_idCliente" msprop:Generator_UserParentTable="Cliente" msprop:Generator_ParentPropName="ClienteRow" />
+      <msdata:Relationship name="FK_Atividade_idCliente" msdata:parent="Cliente" msdata:child="Atividade" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="Atividade" msprop:Generator_ChildPropName="GetAtividadeRows" msprop:Generator_UserRelationName="FK_Atividade_idCliente" msprop:Generator_RelationVarName="relationFK_Atividade_idCliente" msprop:Generator_UserParentTable="Cliente" msprop:Generator_ParentPropName="ClienteRow" />
+      <msdata:Relationship name="FK_Atividade_idTecnico" msdata:parent="Tecnico" msdata:child="Atividade" msdata:parentkey="idTecnico" msdata:childkey="idTecnico" msprop:Generator_UserChildTable="Atividade" msprop:Generator_ChildPropName="GetAtividadeRows" msprop:Generator_UserRelationName="FK_Atividade_idTecnico" msprop:Generator_RelationVarName="relationFK_Atividade_idTecnico" msprop:Generator_UserParentTable="Tecnico" msprop:Generator_ParentPropName="TecnicoRow" />
+      <msdata:Relationship name="FK_Atividade_idTV" msdata:parent="TeamViewer" msdata:child="Atividade" msdata:parentkey="idTV" msdata:childkey="idTV" msprop:Generator_UserChildTable="Atividade" msprop:Generator_ChildPropName="GetAtividadeRows" msprop:Generator_UserRelationName="FK_Atividade_idTV" msprop:Generator_RelationVarName="relationFK_Atividade_idTV" msprop:Generator_UserParentTable="TeamViewer" msprop:Generator_ParentPropName="TeamViewerRow" />
+      <msdata:Relationship name="FK_Cliente_idTecnico" msdata:parent="Tecnico" msdata:child="Cliente" msdata:parentkey="idTecnico" msdata:childkey="idTecnico" msprop:Generator_UserChildTable="Cliente" msprop:Generator_ChildPropName="GetClienteRows" msprop:Generator_UserRelationName="FK_Cliente_idTecnico" msprop:Generator_RelationVarName="relationFK_Cliente_idTecnico" msprop:Generator_UserParentTable="Tecnico" msprop:Generator_ParentPropName="TecnicoRow" />
+      <msdata:Relationship name="FK_TeamViewe_idCliente" msdata:parent="Cliente" msdata:child="TeamViewer" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="TeamViewer" msprop:Generator_ChildPropName="GetTeamViewerRows" msprop:Generator_UserRelationName="FK_TeamViewe_idCliente" msprop:Generator_ParentPropName="ClienteRow" msprop:Generator_RelationVarName="relationFK_TeamViewe_idCliente" msprop:Generator_UserParentTable="Cliente" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
